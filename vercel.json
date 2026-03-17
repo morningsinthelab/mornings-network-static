@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    { "source": "/((?!assets|robots\\.txt|sitemap\\.xml|og-image\\.jpg|logo\\.png|favicon|apple-touch-icon).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/robots.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [{ "key": "Content-Type", "value": "application/xml; charset=utf-8" }]
+    },
+    {
+      "source": "/og-image.jpg",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    }
+  ]
+}
